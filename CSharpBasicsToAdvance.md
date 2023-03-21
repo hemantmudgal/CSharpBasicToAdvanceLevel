@@ -65,11 +65,11 @@
 - So when we compiler an application the compiler builds one or more assemblies depending on how you partition library.
 <br>
   
-    - **System** - <br>We have all these utility classes and primitve types.<br><br>
-    - **Collection.generics** -<br> Used to work with list and collections etc.<br><br>
-    - **linq** - <Br>Linq is used to work with data.<br><br>
-    - **text** - <br>work with text and coding and other stuff.<br><br>
-    - **Threading** - <br>Used to build multithreaded application.
+    - __System__ - <br>We have all these utility classes and primitve types.<br><br>
+    - __Collection.generics__ - <br> Used to work with list and collections etc.<br><br>
+    - __Linq__ - <Br>Linq is used to work with data.<br><br>
+    - __Text__ - <br>work with text and coding and other stuff.<br><br>
+    - __Threading__ - <br>Used to build multithreaded application.
   
   
 ###  Primitve Types and Expressions :-
