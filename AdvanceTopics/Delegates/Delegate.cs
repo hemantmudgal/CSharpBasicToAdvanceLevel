@@ -70,3 +70,5 @@ public class Program
         Console.WriteLine("Removed Red Eyes");
     }
 }
+
+//Why do we need delegate : To achieve flexibility and extensibility.
