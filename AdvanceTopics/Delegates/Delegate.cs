@@ -72,3 +72,10 @@ public class Program
 }
 
 //Why do we need delegate : To achieve flexibility and extensibility.
+
+// we can also solve this problem by interfaces.
+
+// Interfaces or Delegates:
+
+    //Use delegates when event desinging pattern is used and caller doesn't need to access the other properites or methods
+    //on the object implementing the method.
