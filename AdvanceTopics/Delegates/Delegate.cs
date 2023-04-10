@@ -38,14 +38,32 @@ public class PhotoFilters
 
 public class PhotoProcessor
 {
-    public void Process(string path)
+    public delegate void PhotoEventHandler(Photo photo);
+    public void Process(string path, PhotoEventHandler filterHandler)
     {
         Photo photo = new Load(path);
-        var filters = new PhotoFilters(photo);
-        filters.ApplyBrightness(photo);
-        filters.ApplyContrast(photo);
-        filters.ResizeImage(photo);
-
+        filterHandler(photo);
         photo.Save();
+    }
+}
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        var photoProcessor = new PhotoProcessor();
+        var photoFilters = new PhotoFilters();
+        //Delegate is a pointer to a mehtod with the signature.
+        PhotoProcessor.PhotoEventHandler filterHandler = photoFilters.ApplyBrightness();
+        filterHandler += photoFilters.ApplyContrast();
+        filterHandler += photoFilters.ResizeImage();
+        filterHandler += RedEyesRemoved();
+
+        photoProcessor.Process("photo.jpg",filterHandler)
+    }
+
+    static void RedEyesRemoved(Photo photo)
+    {
+        Console.WriteLine("Removed Red Eyes");
     }
 }
