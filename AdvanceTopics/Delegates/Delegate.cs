@@ -38,7 +38,7 @@ public class PhotoFilters
 
 public class PhotoProcessor
 {
-    public delegate void PhotoEventHandler(Photo photo);
+    public delegate void PhotoEventHandler(Photo photo); //Creating custome delegate with return type void and required parameter type Photo.
     public void Process(string path, PhotoEventHandler filterHandler)
     {
         Photo photo = new Load(path);
