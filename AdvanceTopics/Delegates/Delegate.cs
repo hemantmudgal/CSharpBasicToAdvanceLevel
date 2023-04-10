@@ -57,7 +57,7 @@ public class Program
         var photoProcessor = new PhotoProcessor();
         var photoFilters = new PhotoFilters();
         //Delegate is a pointer to a mehtod with the signature.
-        PhotoProcessor.PhotoEventHandler filterHandler = photoFilters.ApplyBrightness();
+        Action<Photo> filterHandler = photoFilters.ApplyBrightness();
         filterHandler += photoFilters.ApplyContrast();
         filterHandler += photoFilters.ResizeImage();
         filterHandler += RedEyesRemoved();
