@@ -51,6 +51,9 @@ public class Program
 {
     static void Main(string[] args)
     {
+
+        //System.Action --> Pointed only for void return typed methods.
+        //System.Func --> Pointed for methods which have some return type.
         var photoProcessor = new PhotoProcessor();
         var photoFilters = new PhotoFilters();
         //Delegate is a pointer to a mehtod with the signature.
