@@ -21,8 +21,8 @@ public class Class1
         }
     }
 
-    public bool IsChaperThan10Dollar(Book book)
-    {
-        return book.Price < 10;
-    }
+    //public bool IsChaperThan10Dollar(Book book)
+    //{
+    //    return book.Price < 10;
+    //}
 }
