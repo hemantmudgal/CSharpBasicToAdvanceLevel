@@ -14,11 +14,7 @@ public class Photo
 
 public class PhotoFilters
 {
-    private Photo photo;
-    public PhotoFilter(Photo photo)
-    {
-        this.photo = photo;
-    }
+    public PhotoFilter() {}
 
     private void ApplyBrightness(Photo photo)
     {
