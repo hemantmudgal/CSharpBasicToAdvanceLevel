@@ -1,9 +1,14 @@
 using System;
 
+public class VideoEventArgs : EventArgs
+{
+    public Video Video { get; set; }
+}
+
 public class VideoEncoder
 {
     //define delegate first.
-    public delegate void VideoEncoderEventHandler(object source, EventArgs args);
+    public delegate void VideoEncoderEventHandler(object source, VideoEventArgs args);
 
     //define an event.
     public event VideoEncoderEventHandler VideoEncoded;
@@ -11,13 +16,13 @@ public class VideoEncoder
     {
         Console.WrieLine("Video Encoded");
         Thread.Sleep(3000);
-        OnVideoEncoded();
+        OnVideoEncoded(video);
     }
 
     //Raise an event.
-    protected virtual void OnVideoEncoded()
+    protected virtual void OnVideoEncoded(Video video)
     {
         if (VideoEncoded != null)
-            VideoEncoded(this, EventsArgs.Empty);
+            VideoEncoded(this, new VideoEventArgs() {Video = video;});
     }
 }
