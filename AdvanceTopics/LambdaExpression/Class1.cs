@@ -12,6 +12,7 @@ public class Program
     static void Main(string[] args)
     {
         Func<int, int> square = number => number * number; // This delegate takes input as integer and return integer value.
-        square(5); // we can call Func Delegate by passing the reuired argument in paranthesis.
+        int output1 = square(5); // we can call Func Delegate by passing the reuired argument in paranthesis.
+        int output2 = Square(5);
     }
 }
