@@ -9,6 +9,10 @@ public class VideoEncoder
 {
     //define delegate first.
     public delegate void VideoEncoderEventHandler(object source, VideoEventArgs args);
+    /*
+     * Alternative way: without defining a delegate
+     *public event EventHandler<VideoEventArgs> VideoEncode
+     */
 
     //define an event.
     public event VideoEncoderEventHandler VideoEncoded;
