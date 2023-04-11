@@ -29,3 +29,6 @@
         }
         
 - 4.Event publisher method should be protected, virtual and void and in the naming convetion should be start with "On".nd in the naming convetion should be start with "On".
+
+- 5.We can achive same thing defining delegate and event with in same line as:
+        public event EventHandler<VideoEventArgs> VideoEncoded;
