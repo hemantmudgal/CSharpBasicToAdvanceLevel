@@ -11,7 +11,9 @@ public class Class1
          * delegate which require an argument of specified type and return the bool
          * value according to the specified condition.
          */
-        var cheaperBooks = bookRepository.FindAll(IsChepaerThan10Dollar);
+        //var cheaperBooks = bookRepository.FindAll(IsChepaerThan10Dollar);
+        
+        var cheaperBooks = bookRepository.FindAll(book => book.Price < 10);
 
         foreach (var cheaperBook in cheaperBooks)
         {
