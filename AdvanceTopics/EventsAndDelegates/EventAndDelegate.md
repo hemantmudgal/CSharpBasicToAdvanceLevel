@@ -15,11 +15,14 @@
 
      Defining delegate in the publisher class.
         public delegate void VideoEncodeEventHandler(object source, EventArgs arg);
+        
 - 2.Define an event based on that delegate.
         public event VideoEncodeEventHandler VideoEncoded;
+        
 - 3.Raise an event.
         protected virtual void OnVideoEncoded(){
                 if(VideoEncoded != null) 
                 VideoEncoded(this, EventArgs.Empty);
         }
-- 4.Event publisher method should be protected, virtual and void and in the naming convetion should be start with "On".
+        
+- 4.Event publisher method should be protected, virtual and void and in the naming convetion should be start with "On".nd in the naming convetion should be start with "On".
