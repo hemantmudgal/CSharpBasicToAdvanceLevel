@@ -1,8 +1,13 @@
 ﻿using System;
 
-public class Class1
+public class EventAndDelegate
 {
-	public Class1()
-	{
-	}
+    static void Main(string[] args)
+    {
+        var video = new Video() { Title = "Title1" };
+        var videoEncoder = new VideoEncoder();
+
+        videoEncoder.Encode(video);
+    }
+
 }
