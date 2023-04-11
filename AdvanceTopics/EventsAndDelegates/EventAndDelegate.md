@@ -13,13 +13,16 @@
 
 - 1.Define a delegate.
 
-     Defining delegate in the publisher class.
+     Defining delegate in the publisher class.<br>
+
         public delegate void VideoEncodeEventHandler(object source, EventArgs arg);
         
-- 2.Define an event based on that delegate.
+- 2.Define an event based on that delegate.<br>
+
         public event VideoEncodeEventHandler VideoEncoded;
         
-- 3.Raise an event.
+- 3.Raise an event.<br>
+
         protected virtual void OnVideoEncoded(){
                 if(VideoEncoded != null) 
                 VideoEncoded(this, EventArgs.Empty);
