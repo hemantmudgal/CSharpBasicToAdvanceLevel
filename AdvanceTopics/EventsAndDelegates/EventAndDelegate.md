@@ -32,4 +32,4 @@
 
 - 5.We can achive same thing defining delegate and event with in same line as:<br>
 
-        public event EventHandler<VideoEventArgs> VideoEncoded;
+        public event EventHandler<VideoEventArgs> VideoEncoded; // Delegate with special argument type
