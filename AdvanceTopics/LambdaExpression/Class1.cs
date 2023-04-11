@@ -3,6 +3,9 @@
 public class Program
 {
     // args => expression
+    // () => ... No arguments
+    // x => ... for one argument
+    // (x,y,z) => ... for multiple arguments surrond them with paranthesis
 
     //public int Square(int number)
     //{
