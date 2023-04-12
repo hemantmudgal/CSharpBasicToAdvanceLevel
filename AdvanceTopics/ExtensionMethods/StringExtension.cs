@@ -1,6 +1,6 @@
 using System;
 
-class StringExtension
+public static class StringExtension
 {
     public static string Shorten(this String str, int numberOfWords)
     {
